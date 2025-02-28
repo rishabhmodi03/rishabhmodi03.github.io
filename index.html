@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name | Chartered Accountant & Developer</title>
+    <meta name="description" content="Personal website of a Chartered Accountant aspirant, JavaScript and Python developer with expertise in LLM training">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/favicon.ico">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Cursor Animation Overlay -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo">
+                <a href="#home">YN</a>
+            </div>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#research" class="nav-link">LLM Research</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section with Particles.js -->
+        <section id="home" class="hero">
+            <div id="particles-js"></div>
+            <div class="hero-content">
+                <h1 class="glitch-text" data-aos="fade-up">
+                    <span class="name">Your Name</span>
+                </h1>
+                <div class="typed-container" data-aos="fade-up" data-aos-delay="200">
+                    <span id="typed"></span>
+                </div>
+                <div class="hero-cta" data-aos="fade-up" data-aos-delay="400">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="assets/resume.pdf" class="btn btn-secondary" target="_blank">Download CV</a>
+                </div>
+                <div class="scroll-indicator" data-aos="fade-up" data-aos-delay="600">
+                    <div class="mouse">
+                        <div class="wheel"></div>
+                    </div>
+                    <div>
+                        <span class="scroll-text">Scroll Down</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="section-header">
+                    <h2 data-aos="fade-up">About <span>Me</span></h2>
+                    <div class="underline" data-aos="fade-up" data-aos-delay="200"></div>
+                </div>
+                <div class="about-content">
+                    <div class="about-image" data-aos="fade-right">
+                        <div class="image-wrapper">
+                            <img src="assets/images/profile.jpg" alt="Your Name">
+                            <div class="image-overlay"></div>
+                        </div>
+                    </div>
+                    <div class="about-text" data-aos="fade-left">
+                        <h3>Hello, I'm <span>Your Name</span></h3>
+                        <p>I'm a Chartered Accountant aspirant currently undergoing articleship, with a passion for technology and programming. My journey bridges the financial world with cutting-edge tech.</p>
+                        <p>With expertise in JavaScript and Python, I've developed multiple projects while exploring the fascinating realm of Large Language Models and AI training.</p>
+                        
+                        <div class="personal-info">
+                            <div class="info-item">
+                                <span class="info-title">Email:</span>
+                                <span class="info-value">your.email@example.com</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-title">Location:</span>
+                                <span class="info-value">Your City, Country</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-title">Availability:</span>
+                                <span class="info-value">Open to opportunities</span>
+                            </div>
+                        </div>
+                        
+                        <div class="social-links">
+                            <a href="#" target="_blank" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+                            <a href="#" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+                            <a href="#" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Timeline -->
+                <div class="timeline-container" data-aos="fade-up">
+                    <h3 class="timeline-header">My Journey</h3>
+                    <div class="timeline">
+                        <div class="timeline-item" data-aos="fade-up">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>CA Articleship</h4>
+                                <h5>Firm Name <span>2023 - Present</span></h5>
+                                <p>Working on audits, taxation, and financial reporting while gaining practical experience in the accounting profession.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>CA Intermediate</h4>
+                                <h5>ICAI <span>2022</span></h5>
+                                <p>Successfully cleared CA Intermediate examination with strong academic performance.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>Programming Journey</h4>
+                                <h5>Self-Learning <span>2021 - Present</span></h5>
+                                <p>Mastered JavaScript and Python through self-study and project-based learning, developing multiple applications.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>CA Foundation</h4>
+                                <h5>ICAI <span>2021</span></h5>
+                                <p>Began my chartered accountancy journey by clearing the foundation examination.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills">
+            <div class="container">
+                <div class="section-header">
+                    <h2 data-aos="fade-up">My <span>Skills</span></h2>
+                    <div class="underline" data-aos="fade-up" data-aos-delay="200"></div>
+                </div>
+                
+                <div class="skills-tabs">
+                    <div class="tab-buttons">
+                        <button class="tab-btn active" data-tab="technical">Technical</button>
+                        <button class="tab-btn" data-tab="accounting">Accounting</button>
+                        <button class="tab-btn" data-tab="soft">Soft Skills</button>
+                    </div>
+                    
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="technical">
+                            <div class="skills-grid">
+                                <div class="skill-item" data-aos="zoom-in">
+                                    <div class="skill-circle" data-percent="90">
+                                        <div class="progress-bar">
+                                            <div class="progress"></div>
+                                        </div>
+                                        <div class="skill-percent">90%</div>
+                                    </div>
+                                    <h4>JavaScript</h4>
+                                </div>
+                                <div class="skill-item" data-aos="zoom-in" data-aos-delay="100">
+                                    <div class="skill-circle" data-percent="85">
+                                        <div class="progress-bar">
+                                            <div class="progress"></div>
+                                        </div>
+                                        <div class="skill-percent">85%</div>
+                                    </div>
+                                    <h4>Python</h4>
+                                </div>
+                                <div class="skill-item" data-aos="zoom-in" data-aos-delay="200">
+                                    <div class="skill-circle" data-percent="75">
+                                        <div class="progress-bar">
+                                            <div class="progress"></div>
+                                        </div>
+                                        <div class="skill-percent">75%</div>
+                                    </div>
+                                    <h4>HTML/CSS</h4>
+                                </div>
+                                <div class="skill-item" data-aos="zoom-in" data-aos-delay="300">
+                                    <div class="skill-circle" data-percent="70">
+                                        <div class="progress-bar">
+                                            <div class="progress"></div>
+                                        </div>
+                                        <div class="skill-percent">70%</div>
+                                    </div>
+                                    <h4>LLM Training</h4>
+                                </div>
+                                <div class="skill-item" data-aos="zoom-in" data-aos-delay="400">
+                                    <div class="skill-circle" data-percent="65">
+                                        <div class="progress-bar">
+                                            <div class="progress"></div>
+                                        </div>
+                                        <div class="skill-percent">65%</div>
+                                    </div>
+                                    <h4>Data Analysis</h4>
+                                </div>
+                                <div class="skill-item" data-aos="zoom-in" data-aos-delay="500">
+                                    <div class="skill-circle" data-percent="60">
+                                        <div class="progress-bar">
+                                            <div class="progress"></div>
+                                        </div>
+                                        <div class="skill-percent">60%</div>
+                                    </div>
+                                    <h4>React</h4>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="tab-pane" id="accounting">
+                            <div class="skills-grid">
+                                <div class="skill-item">
+                                    <div class="skill-circle" data-percent="85">
+                                        <div class="progress-bar">
+                                            <div class="progress"></div>
+                                        </div>
+                                        <div class="skill-percent">85%</div>
+                                    </div>
+                                    <h4>Financial Accounting</h4>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-circle" data-percent="80">
+                                        <div class="progress-bar">
+                                            <div class="progress"></div>
+                                        </div>
+                                        <div class="skill-percent">80%</div>
+                                    </div>
+                                    <h4>Taxation</h4>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-circle" data-percent="75">
+                                        <div class="progress-bar">
+                                            <div class="progress"></div>
+                                        </div>
+                                        <div class="skill-percent">75%</div>
+                                    </div>
+                                    <h4>Auditing</h4>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-circle" data-percent="70">
+                                        <div class="progress-bar">
+                                            <div class="progress"></div>
+                                        </div>
+                                        <div class="skill-percent">70%</div>
+                                    </div>
+                                    <h4>Corporate Law</h4>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="tab-pane" id="soft">
+                            <div class="skills-grid">
+                                <div class="skill-item">
+                                    <div class="skill-circle" data-percent="95">
+                                        <div class="progress-bar">
+                                            <div class="progress"></div>
+                                        </div>
+                                        <div class="skill-percent">95%</div>
+                                    </div>
+                                    <h4>Problem Solving</h4>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-circle" data-percent="90">
+                                        <div class="progress-bar">
+                                            <div class="progress"></div>
+                                        </div>
+                                        <div class="skill-percent">90%</div>
+                                    </div>
+                                    <h4>Time Management</h4>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-circle" data-percent="85">
+                                        <div class="progress-bar">
+                                            <div class="progress"></div>
+                                        </div>
+                                        <div class="skill-percent">85%</div>
+                                    </div>
+                                    <h4>Communication</h4>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-circle" data-percent="80">
+                                        <div class="progress-bar">
+                                            <div class="progress"></div>
+                                        </div>
+                                        <div class="skill-percent">80%</div>
+                                    </div>
+                                    <h4>Teamwork</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Interactive Terminal -->
+            <div class="terminal-section" data-aos="fade-up">
+                <div class="terminal-header">
+                    <div class="terminal-buttons">
+                        <div class="terminal-button red"></div>
+                        <div class="terminal-button yellow"></div>
+                        <div class="terminal-button green"></div>
+                    </div>
+                    <div class="terminal-title">~/skills-demo</div>
+                </div>
+                <div class="terminal-body">
+                    <div class="terminal-content">
+                        <div class="line">
+                            <span class="prompt">visitor@portfolio:~$</span>
+                            <span class="command">view skills</span>
+                        </div>
+                        <div class="line">Running skill demonstration...</div>
+                        <div class="line">
+                            <pre><code class="language-python">
+def analyze_data(financial_records):
+"""
+Analyze financial data using Python
+"""
+import pandas as pd
+import numpy as np
+
+# Convert to DataFrame
+df = pd.DataFrame(financial_records)
+
+# Calculate key metrics
+summary = {
+    "total_revenue": df["revenue"].sum(),
+    "average_expense": df["expenses"].mean(),
+    "profit_margin": (df["revenue"].sum() - df["expenses"].sum()) / df["revenue"].sum(),
+    "growth_rate": (df["revenue"].iloc[-1] - df["revenue"].iloc[0]) / df["revenue"].iloc[0]
+}
+
+return summary
+                            </code></pre>
+                        </div>
+                        <div class="line">
+                            <span class="prompt">visitor@portfolio:~$</span>
+                            <span class="cursor"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-aos="fade-up">My <span>Projects</span></h2>
+                <div class="underline" data-aos="fade-up" data-aos-delay="200"></div>
+            </div>
+            
+            <div class="project-filters" data-aos="fade-up">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="javascript">JavaScript</button>
+                <button class="filter-btn" data-filter="python">Python</button>
+                <button class="filter-btn" data-filter="llm">LLM</button>
+                <button class="filter-btn" data-filter="accounting">Accounting</button>
+            </div>
+            
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card" data-category="javascript" data-aos="fade-up">
+                    <div class="project-img">
+                        <img src="assets/images/project1.jpg" alt="Project 1">
+                    </div>
+                    <div class="project-content">
+                        <h3>Financial Dashboard</h3>
+                        <p>Interactive dashboard built with JavaScript for financial data visualization and analysis.</p>
+                        <div class="project-tech">
+                            <span>JavaScript</span>
+                            <span>D3.js</span>
+                            <span>REST API</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                            <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-card" data-category="python llm" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-img">
+                        <img src="assets/images/project2.jpg" alt="Project 2">
+                    </div>
+                    <div class="project-content">
+                        <h3>LLM Fine-tuning Pipeline</h3>
+                        <p>Python-based pipeline for fine-tuning language models on financial text and reports.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>PyTorch</span>
+                            <span>Hugging Face</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                            <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="project-card" data-category="accounting python" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-img">
+                        <img src="assets/images/project3.jpg" alt="Project 3">
+                    </div>
+                    <div class="project-content">
+                        <h3>Audit Automation Tool</h3>
+                        <p>Python tool for automating repetitive audit tasks and generating compliance reports.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>Pandas</span>
+                            <span>Excel API</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                            <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 4 -->
+                <div class="project-card" data-category="javascript" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-img">
+                        <img src="assets/images/project4.jpg" alt="Project 4">
+                    </div>
+                    <div class="project-content">
+                        <h3>Tax Calculator App</h3>
+                        <p>Interactive tax calculator with visualization of tax implications for different scenarios.</p>
+                        <div class="project-tech">
+                            <span>JavaScript</span>
+                            <span>Chart.js</span>
+                            <span>Bootstrap</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                            <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 5 -->
+                <div class="project-card" data-category="llm python" data-aos="fade-up" data-aos-delay="400">
+                    <div class="project-img">
+                        <img src="assets/images/project5.jpg" alt="Project 5">
+                    </div>
+                    <div class="project-content">
+                        <h3>Financial Document Analyzer</h3>
+                        <p>LLM-powered tool that extracts and analyzes information from financial documents.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>Transformers</span>
+                            <span>NLP</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                            <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 6 -->
+                <div class="project-card" data-category="accounting javascript" data-aos="fade-up" data-aos-delay="500">
+                    <div class="project-img">
+                        <img src="assets/images/project6.jpg" alt="Project 6">
+                    </div>
+                    <div class="project-content">
+                        <h3>GST Compliance Tool</h3>
+                        <p>Web application for tracking and ensuring GST compliance for businesses.</p>
+                        <div class="project-tech">
+                            <span>JavaScript</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                            <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LLM Research Section -->
+    <section id="research" class="research">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-aos="fade-up">LLM <span>Research</span></h2>
+                <div class="underline" data-aos="fade-up" data-aos-delay="200"></div>
+            </div>
+            
+            <div class="research-intro" data-aos="fade-up">
+                <p>My exploration into Large Language Models focuses on their applications in finance and accounting, aiming to bridge traditional financial practices with cutting-edge AI technology.</p>
+            </div>
+            
+            <div class="research-areas">
+                <div class="research-card" data-aos="fade-up">
+                    <div class="research-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="research-content">
+                        <h3>Fine-tuning for Financial Domain</h3>
+                        <p>Researching techniques to adapt general-purpose LLMs for specialized financial tasks, including financial statement analysis and regulatory compliance.</p>
+                    </div>
+                </div>
+                
+                <div class="research-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="research-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="research-content">
+                        <h3>Financial Sentiment Analysis</h3>
+                        <p>Developing models that can accurately detect sentiment in financial reports and news, providing insights for investment decisions.</p>
+                    </div>
+                </div>
+                
+                <div class="research-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="research-icon">
+                        <i class="fas fa-file-invoice-dollar"></i>
+                    </div>
+                    <div class="research-content">
+                        <h3>Automated Audit Procedures</h3>
+                        <p>Exploring how LLMs can assist in identifying anomalies in financial data and automating parts of the audit process.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="research-visualization" data-aos="fade-up">
+                <h3>LLM Training Process</h3>
+                <div class="visualization-container">
+                    <div class="viz-step">
+                        <div class="viz-icon">1</div>
+                        <h4>Data Collection</h4>
+                        <p>Financial reports, regulatory documents, accounting standards</p>
+                    </div>
+                    <div class="viz-arrow"><i class="fas fa-arrow-right"></i></div>
+                    <div class="viz-step">
+                        <div class="viz-icon">2</div>
+                        <h4>Preprocessing</h4>
+                        <p>Cleaning, tokenization, and formatting for model input</p>
+                    </div>
+                    <div class="viz-arrow"><i class="fas fa-arrow-right"></i></div>
+                    <div class="viz-step">
+                        <div class="viz-icon">3</div>
+                        <h4>Fine-tuning</h4>
+                        <p>Adapting pre-trained models to financial domain tasks</p>
+                    </div>
+                    <div class="viz-arrow"><i class="fas fa-arrow-right"></i></div>
+                    <div class="viz-step">
+                        <div class="viz-icon">4</div>
+                        <h4>Evaluation</h4>
+                        <p>Testing accuracy, relevance, and compliance with accounting standards</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-aos="fade-up">Contact <span>Me</span></h2>
+                <div class="underline" data-aos="fade-up" data-aos-delay="200"></div>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info" data-aos="fade-right">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Location</h3>
+                            <p>Your City, Country</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <p>your.email@example.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Phone</h3>
+                            <p>+91 1234567890</p>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links-large">
+                        <a href="#" target="_blank" class="social-link">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" target="_blank" class="social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" target="_blank" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" target="_blank" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="contact-form-container" data-aos="fade-left">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" required>
+                            <label for="name">Your Name</label>
+                            <div class="line"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" required>
+                            <label for="email">Your Email</label>
+                            <div class="line"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" required>
+                            <label for="subject">Subject</label>
+                            <div class="line"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                            <label for="message">Your Message</label>
+                            <div class="line"></div>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h3>Your Name</h3>
+                <p>Chartered Accountant Aspirant & Developer</p>
+            </div>
+            
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#research">Research</a>
+                <a href="#contact">Contact</a>
+            </div>
+            
+            <div class="footer-social">
+                <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; <span id="currentYear"></span> Your Name. All Rights Reserved.</p>
+            <p>Designed & Developed with <i class="fas fa-heart"></i></p>
+        </div>
+    </div>
+</footer>
+
+<!-- Back to Top Button -->
+<a href="#home" class="back-to-top">
+    <i class="fas fa-arrow-up"></i>
+</a>
+
+<!-- Project Modal -->
+<div class="project-modal" id="projectModal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <div class="modal-body">
+            <!-- Content will be dynamically inserted here -->
+        </div>
+    </div>
+</div>
+
+<!-- Scripts -->
+
+<!-- Particles.js -->
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+<!-- GSAP Animation Library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+
+<!-- Typed.js -->
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+<!-- AOS Animation Library -->
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<!-- Prism.js for code highlighting -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+
+<!-- Tilt.js for 3D card effects -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+
+<!-- Custom JS -->
+<script src="js/main.js"></script>
+<script src="js/projects.js"></script>
+
+<script>
+    // Initialize AOS animations
+    AOS.init({
+        duration: 800,
+        easing: 'ease-in-out',
+        once: true,
+        mirror: false
+    });
+    
+    // Set current year in footer
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+    
+    // Initialize particles.js
+    particlesJS("particles-js", {
+        "particles": {
+            "number": {
+                "value": 80,
+                "density": {
+                    "enable": true,
+                    "value_area": 800
+                }
+            },
+            "color": {
+                "value": "#ffffff"
+            },
+            "shape": {
+                "type": "circle",
+                "stroke": {
+                    "width": 0,
+                    "color": "#000000"
+                },
+                "polygon": {
+                    "nb_sides": 5
+                }
+            },
+            "opacity": {
+                "value": 0.5,
+                "random": false,
+                "anim": {
+                    "enable": false,
+                    "speed": 1,
+                    "opacity_min": 0.1,
+                    "sync": false
+                }
+            },
+            "size": {
+                "value": 3,
+                "random": true,
+                "anim": {
+                    "enable": false,
+                    "speed": 40,
+                    "size_min": 0.1,
+                    "sync": false
+                }
+            },
+            "line_linked": {
+                "enable": true,
+                "distance": 150,
+                "color": "#ffffff",
+                "opacity": 0.4,
+                "width": 1
+            },
+            "move": {
+                "enable": true,
+                "speed": 6,
+                "direction": "none",
+                "random": false,
+                "straight": false,
+                "out_mode": "out",
+                "bounce": false,
+                "attract": {
+                    "enable": false,
+                    "rotateX": 600,
+                    "rotateY": 1200
+                }
+            }
+        },
+        "interactivity": {
+            "detect_on": "canvas",
+            "events": {
+                "onhover": {
+                    "enable": true,
+                    "mode": "repulse"
+                },
+                "onclick": {
+                    "enable": true,
+                    "mode": "push"
+                },
+                "resize": true
+            },
+            "modes": {
+                "grab": {
+                    "distance": 400,
+                    "line_linked": {
+                        "opacity": 1
+                    }
+                },
+                "bubble": {
+                    "distance": 400,
+                    "size": 40,
+                    "duration": 2,
+                    "opacity": 8,
+                    "speed": 3
+                },
+                "repulse": {
+                    "distance": 200,
+                    "duration": 0.4
+                },
+                "push": {
+                    "particles_nb": 4
+                },
+                "remove": {
+                    "particles_nb": 2
+                }
+            }
+        },
+        "retina_detect": true
+    });
+    
+    // Initialize Typed.js
+    var typed = new Typed('#typed', {
+        strings: [
+            'Chartered Accountant Aspirant',
+            'JavaScript Developer',
+            'Python Programmer',
+            'LLM Researcher'
+        ],
+        typeSpeed: 50,
+        backSpeed: 30,
+        backDelay: 2000,
+        loop: true
+    });
+    
+    // Initialize Tilt.js for project cards
+    VanillaTilt.init(document.querySelectorAll(".project-card"), {
+        max: 15,
+        speed: 400,
+        glare: true,
+        "max-glare": 0.3
+    });
+</script>
+</body>
+</html>
