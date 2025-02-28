@@ -1759,3 +1759,102 @@ section {
         float: none;
     }
 }
+
+/* Fix for About section */
+.about {
+    padding: 100px 0;
+    position: relative;
+    background-color: var(--bg-light);
+    min-height: 100vh; /* Ensure minimum height */
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    margin-bottom: 80px; /* Add space before timeline */
+}
+
+.about-image {
+    position: relative;
+    display: block; /* Ensure it's visible */
+}
+
+.image-wrapper {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    max-width: 100%;
+}
+
+.image-wrapper img {
+    width: 100%;
+    display: block;
+    height: auto;
+}
+
+.about-text {
+    display: block; /* Ensure it's visible */
+}
+
+.about-text h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+.about-text p {
+    margin-bottom: 20px;
+    color: var(--text-light);
+    line-height: 1.8;
+}
+
+.personal-info {
+    margin-top: 30px;
+}
+
+.info-item {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.info-title {
+    min-width: 120px;
+    font-weight: 600;
+    color: var(--text-white);
+}
+
+.info-value {
+    color: var(--text-light);
+}
+
+/* Responsive fix for About section */
+@media (max-width: 992px) {
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .about-image {
+        order: 2;
+        margin: 0 auto;
+        max-width: 80%;
+    }
+    
+    .about-text {
+        order: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .about {
+        padding: 80px 0;
+    }
+    
+    .about-image {
+        max-width: 100%;
+    }
+}
