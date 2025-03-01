@@ -359,6 +359,8 @@ section {
 }
 
 #typed {
+    opacity: 1 !important;  /* Make absolutely sure it's visible */
+    visibility: visible 
     color: var(--text-color);
 }
 
