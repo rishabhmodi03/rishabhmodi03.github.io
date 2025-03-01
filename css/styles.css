@@ -359,7 +359,7 @@ section {
 }
 
 #typed {
-    color: var(--text-muted);
+    color: var(--text-color);
 }
 
 .hero-cta {
@@ -579,10 +579,6 @@ section {
     color: var(--primary-color);
 }
 
-.about-text p {
-    margin-bottom: 1.5rem;
-    color: var(--text-muted);
-}
 
 .personal-info {
     margin: 2rem 0;
@@ -1827,9 +1823,6 @@ section {
     color: var(--text-white);
 }
 
-.info-value {
-    color: var(--text-light);
-}
 
 /* Responsive fix for About section */
 @media (max-width: 992px) {
