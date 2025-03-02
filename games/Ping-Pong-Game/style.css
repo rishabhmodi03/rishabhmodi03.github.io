@@ -1,0 +1,61 @@
+:root {
+  /* Main Colors */
+  --primary-color: #6c5ce7;
+  --secondary-color: #00cec9;
+  --accent-color: #fd79a8;
+  --bg-color: #0f0f1a;
+  --bg-light: #1a1a2e;
+  --text-color: #f0f0f0;
+  --text-muted: #a0a0a0;
+  --border-color: #2d2d42;
+  
+  /* Animation Timings */
+  --transition-fast: 0.3s;
+  --transition-medium: 0.5s;
+  --transition-slow: 0.8s;
+  
+  /* Fonts */
+  --font-primary: 'Poppins', sans-serif;
+  --font-code: 'Fira Code', monospace;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.btn {
+  background-color: var(--primary-color);
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color var(--transition-fast) ease;
+}
+
+.btn:hover {
+  background-color: var(--secondary-color);
+}
+
+.control {
+  text-align: center;
+  color: var(--text-color);
+}
+
+canvas {
+  background: var(--bg-color);
+  border: 1px solid var(--border-color);
+}
