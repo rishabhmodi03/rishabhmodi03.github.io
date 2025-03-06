@@ -2,6 +2,26 @@
 const projectsData = [
     {
         id: 1,
+        title: "Ping Pong Game",
+        category: "javascript game",
+        image: "assets/images/pingpong.jpg", // You'll need to add this image
+        description: "Interactive Ping Pong game built with HTML, CSS, and JavaScript.",
+        technologies: ["JavaScript", "HTML5", "CSS3"],
+        githubLink: "#",
+        liveLink: "/games/Ping-Pong-Game/",
+        detailedDescription: `
+            <p>A classic Ping Pong game implementation using vanilla JavaScript:</p>
+            <ul>
+                <li>Smooth paddle controls with keyboard input</li>
+                <li>Physics-based ball movement and collision detection</li>
+                <li>Score tracking and game state management</li>
+                <li>Responsive design that works across different screen sizes</li>
+            </ul>
+            <p>The game demonstrates core concepts in game development including animation loops, collision detection, and user input handling.</p>
+        `
+    },
+    {
+        id: 7,
         title: "Financial Dashboard",
         category: "javascript",
         image: "assets/images/project1.jpg",
