@@ -632,7 +632,39 @@ return summary
             </div>
         </div>
     </section>
-
+    <section id="singularity-feed" class="singularity-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Technological Singularity Updates</h2>
+                <p>Latest discussions from r/singularity subreddit</p>
+            </div>
+            
+            <div class="feed-container" data-aos="fade-up">
+                <div class="feed-header">
+                    <img src="assets/images/reddit-logo.png" alt="Reddit Logo" class="reddit-logo">
+                    <h3>r/singularity</h3>
+                    <a href="https://www.reddit.com/r/singularity/" target="_blank" class="visit-subreddit">
+                        <i class="fab fa-reddit-alien"></i> Visit Subreddit
+                    </a>
+                </div>
+                
+                <div id="singularity-posts" class="feed-posts">
+                    <!-- Posts will be loaded here -->
+                    <div class="loading-spinner">
+                        <div class="spinner"></div>
+                        <p>Loading latest posts...</p>
+                    </div>
+                </div>
+                
+                <div class="feed-footer">
+                    <p>Content from Reddit's r/singularity community</p>
+                    <a href="https://www.reddit.com/r/singularity/.rss" target="_blank" class="rss-link">
+                        <i class="fas fa-rss"></i> RSS Feed
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
@@ -817,7 +849,7 @@ return summary
     particlesJS("particles-js", {
         "particles": {
             "number": {
-                "value": 200,
+                "value": 100,
                 "density": {
                     "enable": true,
                     "value_area": 800
@@ -937,10 +969,11 @@ return summary
     // Initialize Tilt.js for project cards
     VanillaTilt.init(document.querySelectorAll(".project-card"), {
         max: 15,
-        speed: 400,
+        speed: 100,
         glare: true,
         "max-glare": 0.3
     });
+    
 </script>
 </body>
 </html>

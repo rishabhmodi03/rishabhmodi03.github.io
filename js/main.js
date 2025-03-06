@@ -358,3 +358,116 @@ fetch('/assets/js/games.js')
     }
   })
   .catch(error => console.error('Error loading games data:', error));
+
+
+// Reddit Feed Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const singularityFeed = document.getElementById('singularity-posts');
+    if (!singularityFeed) return;
+
+    // Function to format date
+    function formatDate(dateString) {
+        const date = new Date(dateString);
+        return date.toLocaleDateString('en-US', {
+            year: 'numeric',
+            month: 'short',
+            day: 'numeric'
+        });
+    }
+
+    // Function to limit excerpt length
+    function truncateText(text, maxLength) {
+        if (text.length <= maxLength) return text;
+        return text.substr(0, maxLength) + '...';
+    }
+
+    // Function to strip HTML tags
+    function stripHtml(html) {
+        const tmp = document.createElement('DIV');
+        tmp.innerHTML = html;
+        return tmp.textContent || tmp.innerText || '';
+    }
+
+    // Use a CORS proxy to fetch the RSS feed
+    // Note: In production, you should set up your own proxy or use a service with proper API key
+    const corsProxy = 'https://api.allorigins.win/raw?url=';
+    const subredditRss = 'https://www.reddit.com/r/singularity/.rss';
+    const encodedUrl = encodeURIComponent(subredditRss);
+    
+    fetch(`${corsProxy}${encodedUrl}`)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.text();
+        })
+        .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
+        .then(data => {
+            const items = data.querySelectorAll("item");
+            
+            // Clear loading spinner
+            singularityFeed.innerHTML = '';
+            
+            // Check if we have items
+            if (items.length === 0) {
+                singularityFeed.innerHTML = '<div class="feed-error">No posts found. Please try again later.</div>';
+                return;
+            }
+            
+            // Process and display up to 10 posts
+            const postsToShow = Math.min(items.length, 10);
+            
+            for (let i = 0; i < postsToShow; i++) {
+                const item = items[i];
+                
+                // Extract post data
+                const title = item.querySelector("title").textContent;
+                const link = item.querySelector("link").textContent;
+                const pubDate = formatDate(item.querySelector("pubDate").textContent);
+                const creator = item.querySelector("dc\\:creator") ? 
+                    item.querySelector("dc\\:creator").textContent : "Unknown";
+                
+                // Extract content or description
+                let content = '';
+                if (item.querySelector("content\\:encoded")) {
+                    content = item.querySelector("content\\:encoded").textContent;
+                } else if (item.querySelector("description")) {
+                    content = item.querySelector("description").textContent;
+                }
+                
+                // Clean and truncate content
+                const cleanContent = stripHtml(content);
+                const excerpt = truncateText(cleanContent, 200);
+                
+                // Create post element
+                const postElement = document.createElement('div');
+                postElement.className = 'reddit-post';
+                postElement.innerHTML = `
+                    <div class="post-header">
+                        <span class="post-author">Posted by ${creator}</span>
+                        <span class="post-date">${pubDate}</span>
+                    </div>
+                    <h4 class="post-title">
+                        <a href="${link}" target="_blank">${title}</a>
+                    </h4>
+                    <p class="post-excerpt">${excerpt}</p>
+                    <div class="post-meta">
+                        <span class="post-comments">
+                            <i class="far fa-comment"></i> Discuss on Reddit
+                        </span>
+                    </div>
+                `;
+                
+                singularityFeed.appendChild(postElement);
+            }
+        })
+        .catch(error => {
+            console.error('Error fetching Reddit RSS feed:', error);
+            singularityFeed.innerHTML = `
+                <div class="feed-error">
+                    <p>Failed to load posts from r/singularity.</p>
+                    <p>Error: ${error.message}</p>
+                </div>
+            `;
+        });
+});
