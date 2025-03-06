@@ -389,7 +389,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Reddit JSON endpoint for r/singularity
-    const subredditUrl = 'https://www.reddit.com/r/singularity.json';
+    const subredditUrl = 'https://api.allorigins.win/raw?url=https://www.reddit.com/r/singularity.json';
     
     // Use fetch with appropriate headers to mimic a browser request
     fetch(subredditUrl, {
