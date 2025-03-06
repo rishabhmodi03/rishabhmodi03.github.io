@@ -328,3 +328,33 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 });
+
+
+// Games preview
+fetch('/assets/js/games.js')
+  .then(response => response.text())
+  .then(scriptText => {
+    // Extract games data from the script
+    const gamesMatch = scriptText.match(/const games = (\[[\s\S]*?\]);/);
+    if (gamesMatch && gamesMatch[1]) {
+      const gamesData = JSON.parse(gamesMatch[1].replace(/`[\s\S]*?`/g, '""'));
+      
+      // Get the preview container
+      const gamesPreviewCards = document.querySelector('.games-preview-cards');
+      
+      // Display first 3 games
+      if (gamesPreviewCards) {
+        gamesData.slice(0, 3).forEach(game => {
+          const gameCard = document.createElement('div');
+          gameCard.className = 'game-preview-card';
+          gameCard.innerHTML = `
+            <img src="${game.image}" alt="${game.title}">
+            <h3>${game.title}</h3>
+            <a href="${game.playLink}" class="game-play-btn">Play</a>
+          `;
+          gamesPreviewCards.appendChild(gameCard);
+        });
+      }
+    }
+  })
+  .catch(error => console.error('Error loading games data:', error));
