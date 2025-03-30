@@ -331,7 +331,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 // Games preview
-fetch('https://rishabhmodi03.github.io/my_website/assets/js/games.js')
+fetch('https://rishabhmodi03.github.io/assets/js/games.js')
   .then(response => response.text())
   .then(scriptText => {
     // Extract games data from the script
