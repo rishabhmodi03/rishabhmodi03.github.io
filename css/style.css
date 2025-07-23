@@ -1,0 +1,208 @@
+/* --- General Setup & Variables --- */
+:root {
+    --dark-navy: #0a192f;
+    --light-navy: #112240;
+    --lightest-navy: #233554;
+    --slate: #8892b0;
+    --light-slate: #a8b2d1;
+    --lightest-slate: #ccd6f6;
+    --accent-color: #64ffda;
+    --font-sans: 'Calibri', 'San Francisco', 'SF Pro Text', -apple-system, system-ui, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--dark-navy);
+    color: var(--slate);
+    font-family: var(--font-sans);
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+/* --- Subtle Animations --- */
+.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- Header & Navigation --- */
+.header {
+    background-color: rgba(10, 25, 47, 0.85);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--lightest-navy);
+    padding: 0 2rem;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 70px;
+}
+
+.nav-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--lightest-slate);
+    text-decoration: none;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-link {
+    color: var(--lightest-slate);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--accent-color);
+}
+
+.hamburger { 
+    display: none; 
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    padding: 0;
+}
+
+.bar { 
+    display: block; 
+    width: 25px; 
+    height: 3px; 
+    margin: 5px auto; 
+    background-color: var(--lightest-slate); 
+    transition: all 0.3s ease-in-out; 
+}
+
+/* --- Sections --- */
+.content-section {
+    padding: 100px 15%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.content-section h2 {
+    color: var(--lightest-slate);
+    font-size: 2rem;
+    margin-bottom: 30px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.content-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background-color: var(--accent-color);
+}
+
+/* --- Hero Section --- */
+.hero {
+    position: relative;
+    min-height: 80vh; /* Changed to min-height for better responsiveness */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--lightest-slate);
+    background: var(--dark-navy);
+    padding: 0 1rem;
+}
+
+.hero-text h1 {
+    font-size: clamp(2.5rem, 5vw, 3.5rem); /* Responsive font size */
+    color: var(--lightest-slate);
+}
+
+.hero-text p {
+    font-size: clamp(1rem, 2.5vw, 1.2rem); /* Responsive font size */
+    color: var(--accent-color);
+    margin-top: 10px;
+    max-width: 600px;
+}
+
+/* --- Experience Timeline --- */
+.timeline { position: relative; margin-top: 40px; }
+.timeline::before { content: ''; position: absolute; left: 15px; top: 0; bottom: 0; width: 3px; background-color: var(--lightest-navy); }
+.timeline-item { margin-bottom: 30px; position: relative; padding-left: 50px; }
+.timeline-item::before { content: ''; position: absolute; left: 8px; top: 5px; width: 15px; height: 15px; background-color: var(--accent-color); border-radius: 50%; z-index: 1; }
+.timeline-content { background-color: var(--light-navy); padding: 20px; border-radius: 8px; border: 1px solid var(--lightest-navy); }
+.timeline-content h3 { color: var(--accent-color); }
+
+/* --- Accomplishments Section --- */
+.accomplishments-cards-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-top: 40px;
+}
+.accomplishment-card {
+    background: var(--light-navy);
+    padding: 25px;
+    border-radius: 5px;
+    border-left: 4px solid var(--accent-color);
+}
+.accomplishment-card h4 { color: var(--lightest-slate); margin-bottom: 10px; }
+
+/* --- Competencies Grid --- */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+}
+.skill-card { background-color: var(--light-navy); padding: 25px; border-radius: 8px; transition: transform 0.3s ease; }
+.skill-card:hover { transform: translateY(-5px); }
+.skill-card h3 { color: var(--lightest-slate); margin-bottom: 10px; }
+
+/* --- Contact Section --- */
+.contact { text-align: center; }
+.btn { display: inline-block; color: var(--accent-color); background-color: transparent; border: 1px solid var(--accent-color); padding: 12px 25px; border-radius: 5px; text-decoration: none; margin: 20px 10px; transition: background-color 0.3s ease; }
+.btn:hover { background-color: rgba(100, 255, 218, 0.1); }
+.contact-details { margin-top: 30px; line-height: 2.5; }
+.contact-details p { display: flex; align-items: center; justify-content: center; gap: 10px; flex-wrap: wrap; }
+.contact-details a { color: var(--light-slate); text-decoration: none; }
+.contact-details a:hover { text-decoration: underline; color: var(--accent-color); }
+.contact-details .fas, .contact-details .fab { color: var(--accent-color); }
+
+/* --- Footer --- */
+.footer { text-align: center; padding: 20px; font-size: 0.9rem; }
+.copyright { color: var(--slate); }
+
+/* --- Responsive Design for Mobile --- */
+@media(max-width: 768px) {
+    .content-section { padding: 80px 10%; }
+    .hamburger { display: block; }
+    .hamburger.active .bar:nth-child(2) { opacity: 0; }
+    .hamburger.active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    .hamburger.active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+    .nav-menu { position: fixed; left: -100%; top: 70px; flex-direction: column; background-color: var(--light-navy); width: 100%; height: calc(100vh - 70px); text-align: center; transition: left 0.3s ease-in-out; gap: 1rem; padding-top: 2rem; }
+    .nav-menu.active { left: 0; }
+}
